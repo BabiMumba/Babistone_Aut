@@ -55,11 +55,12 @@ class Register_Page : AppCompatActivity() {
                 }
             }
             btn_valider.setOnClickListener {
-                if (mail.text.toString().isEmpty() || passeword.text.toString()
-                        .isEmpty() || confirmer_password.text.toString().isEmpty()
+                var mail =mail.text.toString()
+                var password = passeword.text.toString()
+                if (mail.isBlank() || password.isBlank()|| confirmer_password.text.toString().isEmpty()
                 ) {
                     Toast.makeText(this, "Champ Vide", Toast.LENGTH_SHORT).show()
-                } else if (passeword.text.toString() != confirmer_password.text.toString()) {
+                } else if (password != confirmer_password.text.toString()) {
                     confirmer_password.error = "mot de passe different"
                 } else {
 
@@ -70,19 +71,23 @@ class Register_Page : AppCompatActivity() {
                     editor.apply()
                      */
 
-                    auth.createUserWithEmailAndPassword(mail.text.toString(), passeword.text.toString()).addOnCompleteListener(this) {
+                    auth.createUserWithEmailAndPassword(mail, password).addOnCompleteListener(this) {
                         if (it.isSuccessful) {
-                            Toast.makeText(this, "Successfully Singed Up", Toast.LENGTH_SHORT).show()
-                            finish()
+
                         } else {
                             Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
                         }
                     }
-                    var act_home = Intent(this, Home_pageActivity::class.java)
-                    startActivity(act_home)
-                    finish()
+
                 }
             }
 
         }
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+
     }
+
+}
