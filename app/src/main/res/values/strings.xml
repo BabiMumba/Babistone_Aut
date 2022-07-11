@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Babistone_Auth</string>
+    <string name="create">Creer un compte !</string>
+    <string name="compte">j\'ai un compte !</string>
+    <string name="valider">Se Connecter</string>
+    <string name="confirmer">confirmer le mot de passe</string>
+    <string name="passe">Votre mot de passe</string>
+    <string name="mail">Votre mail</string>
+    <string name="create_cpunt">Creer un Compte</string>
+</resources>
