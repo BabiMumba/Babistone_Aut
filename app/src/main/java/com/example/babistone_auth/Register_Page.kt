@@ -1,29 +1,33 @@
 package com.example.babistone_auth
 
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.register_page.*
 
 class Register_Page : AppCompatActivity() {
+
     lateinit var sharedPreferences: SharedPreferences
     lateinit var etEmail: EditText
     lateinit var etConfPass: EditText
     private lateinit var etPass: EditText
     private lateinit var btnSignUp: Button
-    lateinit var tvRedirectLogin: TextView
+    
 
     // create Firebase authentication object
-    private lateinit var auth: FirebaseAuth
+     lateinit var auth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,8 +50,9 @@ class Register_Page : AppCompatActivity() {
         etPass = findViewById(R.id.passeword)
         btnSignUp = findViewById(R.id.btn_valider)
 
-        auth = Firebase.auth
+        auth = FirebaseAuth.getInstance()
 
+        
             title = "Creation du Compte"
             compte.setOnClickListener {
                 Intent(this, Login_Page::class.java).also {
@@ -57,12 +62,11 @@ class Register_Page : AppCompatActivity() {
             btn_valider.setOnClickListener {
                 var mail =mail.text.toString()
                 var password = passeword.text.toString()
-                if (mail.isBlank() || password.isBlank()|| confirmer_password.text.toString().isEmpty()
+
+                if (mail.isBlank() || password.isBlank()
                 ) {
                     Toast.makeText(this, "Champ Vide", Toast.LENGTH_SHORT).show()
-                } else if (password != confirmer_password.text.toString()) {
-                    confirmer_password.error = "mot de passe different"
-                } else {
+                }  else {
 
                     /*
                      val editor = sharedPreferences.edit()
@@ -73,6 +77,10 @@ class Register_Page : AppCompatActivity() {
 
                     auth.createUserWithEmailAndPassword(mail, password).addOnCompleteListener(this) {
                         if (it.isSuccessful) {
+                            Intent(this, Home_pageActivity::class.java).also {
+                                startActivity(it)
+                                Toast.makeText(this, "succes", Toast.LENGTH_SHORT).show()
+                            }
 
                         } else {
                             Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
