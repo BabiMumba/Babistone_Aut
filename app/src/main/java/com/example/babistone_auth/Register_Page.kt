@@ -70,6 +70,14 @@ class Register_Page : AppCompatActivity() {
                     editor.apply()
                      */
 
+                    auth.createUserWithEmailAndPassword(mail.text.toString(), passeword.text.toString()).addOnCompleteListener(this) {
+                        if (it.isSuccessful) {
+                            Toast.makeText(this, "Successfully Singed Up", Toast.LENGTH_SHORT).show()
+                            finish()
+                        } else {
+                            Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                     var act_home = Intent(this, Home_pageActivity::class.java)
                     startActivity(act_home)
                     finish()
