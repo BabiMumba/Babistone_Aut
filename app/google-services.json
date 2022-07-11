@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "452801357011",
+    "project_id": "babiauth",
+    "storage_bucket": "babiauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452801357011:android:e0ea76572722191bf7a026",
+        "android_client_info": {
+          "package_name": "com.example.babistone_auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452801357011-4bch9b0dtr9f41pmfhshlod2t4rkcmdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8Qyel2So89gUXUMYLLiydY3cEzlfHcpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452801357011-4bch9b0dtr9f41pmfhshlod2t4rkcmdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
