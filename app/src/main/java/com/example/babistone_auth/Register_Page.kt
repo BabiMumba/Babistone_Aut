@@ -10,6 +10,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.register_page.*
 
 class Register_Page : AppCompatActivity() {
@@ -43,6 +45,8 @@ class Register_Page : AppCompatActivity() {
         etConfPass = findViewById(R.id.confirmer_password)
         etPass = findViewById(R.id.passeword)
         btnSignUp = findViewById(R.id.btn_valider)
+
+        auth = Firebase.auth
 
             title = "Creation du Compte"
             compte.setOnClickListener {
