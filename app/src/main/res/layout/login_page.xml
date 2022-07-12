@@ -21,7 +21,7 @@
 
     <EditText
         android:inputType="textEmailAddress"
-        android:id="@+id/mail"
+        android:id="@+id/mail_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="votre Mail"
@@ -30,8 +30,8 @@
         android:padding="15sp"
         />
     <EditText
-        android:inputType="textAutoComplete"
-        android:id="@+id/passeword"
+        android:inputType="textPassword"
+        android:id="@+id/mpass_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="votre mot de passe"
@@ -47,7 +47,7 @@
     >
 
     <Button
-        android:id="@+id/btn_valider"
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
