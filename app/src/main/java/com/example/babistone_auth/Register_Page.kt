@@ -7,10 +7,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -61,7 +59,6 @@ class Register_Page : AppCompatActivity() {
             btn_valider.setOnClickListener {
                 var mail =mail.text.toString()
                 var password = passeword.text.toString()
-
                 if (mail.isEmpty() || password.isEmpty()
                 ) {
                     Toast.makeText(this, "Champ Vide", Toast.LENGTH_SHORT).show()
@@ -70,11 +67,11 @@ class Register_Page : AppCompatActivity() {
                         .addOnCompleteListener(Login_Page()) { task ->
                             if (task.isSuccessful) {
 
+                                progressbar.visibility = View.VISIBLE
                                 Intent(this,Home_pageActivity::class.java).also {
                                     Toast.makeText(this, "compte creer avec succes", Toast.LENGTH_SHORT).show()
                                     startActivity(it)
                                 }
-
 
                             } else {
                                 Toast.makeText(
@@ -89,11 +86,22 @@ class Register_Page : AppCompatActivity() {
             }
 
         }
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
+    private fun createAccount(email: String, password: String) {
 
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(Register_Page()) { task ->
+                if (task.isSuccessful) {
+
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                    Toast.makeText(this, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show()
+
+                }
+
+                progressbar.visibility= View.VISIBLE
+            }
     }
 
 }

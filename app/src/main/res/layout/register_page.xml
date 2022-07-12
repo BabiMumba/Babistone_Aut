@@ -51,6 +51,14 @@
         android:background="@drawable/arrondire"
         android:padding="15sp"
         />
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:indeterminate="true"
+        android:layout_margin="5dp"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -67,6 +75,7 @@
             android:text="@string/valider"
             android:textAllCaps="false"
             android:textColor="@color/black" />
+
 
         <TextView
             android:id="@+id/compte"
