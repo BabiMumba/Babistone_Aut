@@ -52,7 +52,6 @@ class Register_Page : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        
             title = "Creation du Compte"
             compte.setOnClickListener {
                 Intent(this, Login_Page::class.java).also {
@@ -71,12 +70,15 @@ class Register_Page : AppCompatActivity() {
                         .addOnCompleteListener(Login_Page()) { task ->
                             if (task.isSuccessful) {
 
-                                Toast.makeText(this, "success", Toast.LENGTH_SHORT).show()
+                                Intent(this,Home_pageActivity::class.java).also {
+                                    Toast.makeText(this, "compte creer avec succes", Toast.LENGTH_SHORT).show()
+                                    startActivity(it)
+                                }
+
 
                             } else {
-
                                 Toast.makeText(
-                                    this, "Authentication failed.",
+                                    this, "erreur d'enregistrement",
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }
