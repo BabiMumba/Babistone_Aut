@@ -67,17 +67,17 @@
             android:text="@string/valider"
             android:textAllCaps="false"
             android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/compte"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
             android:text="@string/compte"
             android:textColor="@color/black"
-            android:textStyle="normal"
-            />
+            android:textStyle="normal" />
     </RelativeLayout>
 
 </LinearLayout>

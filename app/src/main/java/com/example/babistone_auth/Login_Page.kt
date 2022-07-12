@@ -25,28 +25,17 @@ class Login_Page : AppCompatActivity() {
         btn_login.setOnClickListener {
             var mail = mail_login.text.toString()
             var mpasse = mpass_login.text.toString()
+
             btn_login.setOnClickListener {
 
                 if (mail.isEmpty()||mpasse.isEmpty()){
                     Toast.makeText(this, "non text", Toast.LENGTH_SHORT).show()
                 }else{
-                    auth.createUserWithEmailAndPassword(mail,mpasse)
-                        .addOnCompleteListener(Login_Page()) { task ->
-                            if (task.isSuccessful) {
 
-                                Toast.makeText(this, "success", Toast.LENGTH_SHORT).show()
-
-                            } else {
-                                // If sign in fails, display a message to the user.
-                                Toast.makeText(
-                                    this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-
-                        }
                 }
             }
+
+
 
         }
 

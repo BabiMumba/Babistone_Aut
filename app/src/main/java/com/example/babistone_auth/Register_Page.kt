@@ -63,29 +63,25 @@ class Register_Page : AppCompatActivity() {
                 var mail =mail.text.toString()
                 var password = passeword.text.toString()
 
-                if (mail.isBlank() || password.isBlank()
+                if (mail.isEmpty() || password.isEmpty()
                 ) {
                     Toast.makeText(this, "Champ Vide", Toast.LENGTH_SHORT).show()
                 }  else {
+                    auth.createUserWithEmailAndPassword(mail,password)
+                        .addOnCompleteListener(Login_Page()) { task ->
+                            if (task.isSuccessful) {
 
-                    /*
-                     val editor = sharedPreferences.edit()
-                    editor.putBoolean("is_authentificated", true)
-                    editor.putString("nom", mail.text.toString())
-                    editor.apply()
-                     */
+                                Toast.makeText(this, "success", Toast.LENGTH_SHORT).show()
 
-                    auth.createUserWithEmailAndPassword(mail, password).addOnCompleteListener(this) {
-                        if (it.isSuccessful) {
-                            Intent(this, Home_pageActivity::class.java).also {
-                                startActivity(it)
-                                Toast.makeText(this, "succes", Toast.LENGTH_SHORT).show()
+                            } else {
+
+                                Toast.makeText(
+                                    this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
 
-                        } else {
-                            Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
                         }
-                    }
 
                 }
             }

@@ -24,15 +24,16 @@
         <activity
             android:name=".Register_Page"
             android:exported="true">
-
-        </activity>
-        <activity android:name=".Login_Page"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".Login_Page"
+            android:exported="true">
+
         </activity>
     </application>
 
