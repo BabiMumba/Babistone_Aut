@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.register_page.*
 class Register_Page : AppCompatActivity() {
 
     lateinit var sharedPreferences: SharedPreferences
+
     lateinit var etEmail: EditText
     lateinit var etConfPass: EditText
     private lateinit var etPass: EditText
@@ -31,6 +32,7 @@ class Register_Page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_page)
+
         /*
         sharedPreferences = this.getSharedPreferences("app_state", Context.MODE_PRIVATE)
         val isAuthentificated = sharedPreferences.getBoolean("is_authentificated", false)
@@ -63,16 +65,16 @@ class Register_Page : AppCompatActivity() {
                 ) {
                     Toast.makeText(this, "Champ Vide", Toast.LENGTH_SHORT).show()
                 }  else {
+                    progressbar.visibility = View.VISIBLE
                     auth.createUserWithEmailAndPassword(mail,password)
                         .addOnCompleteListener(Login_Page()) { task ->
                             if (task.isSuccessful) {
 
-                                progressbar.visibility = View.VISIBLE
                                 Intent(this,Home_pageActivity::class.java).also {
                                     Toast.makeText(this, "compte creer avec succes", Toast.LENGTH_SHORT).show()
                                     startActivity(it)
-                                }
 
+                                }
                             } else {
                                 Toast.makeText(
                                     this, "erreur d'enregistrement",
