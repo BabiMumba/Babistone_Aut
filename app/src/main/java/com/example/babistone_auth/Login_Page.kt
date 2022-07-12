@@ -26,22 +26,25 @@ class Login_Page : AppCompatActivity() {
             var mail = mail_login.text.toString()
             var mpasse = mpass_login.text.toString()
             btn_login.setOnClickListener {
-                if (mail.isBlank()||mpasse.isBlank()){
-                    Toast.makeText(this, "no text", Toast.LENGTH_SHORT).show()
+
+                if (mail.isEmpty()||mpasse.isEmpty()){
+                    Toast.makeText(this, "non text", Toast.LENGTH_SHORT).show()
                 }else{
                     auth.createUserWithEmailAndPassword(mail,mpasse)
                         .addOnCompleteListener(Login_Page()) { task ->
                             if (task.isSuccessful) {
-                                // Sign in success, update UI with the signed-in user's information
-                                Log.d(TAG, "createUserWithEmail:success")
+
                                 Toast.makeText(this, "success", Toast.LENGTH_SHORT).show()
-                                val user = auth.currentUser
+
                             } else {
                                 // If sign in fails, display a message to the user.
-                                Toast.makeText(this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show()
+                                Toast.makeText(
+                                    this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
 
+                        }
                 }
             }
 
