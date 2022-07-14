@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
         // title, then color of background is passed ,
         // then the image to show on the screen is passed
         // and at last icon to navigate from one screen to other
-        PaperOnboardingPage source = new PaperOnboardingPage("Gfg", "Welcome to GeeksForGeeks", Color.parseColor("#ffb174"), R.drawable.message, R.drawable.smartphone);
-        PaperOnboardingPage source1 = new PaperOnboardingPage("Practice", "Practice questions from all topics", Color.parseColor("#22eaaa"), R.drawable.message, R.drawable.smartphone);
-        PaperOnboardingPage source2 = new PaperOnboardingPage("", " ", Color.parseColor("#ee5a5a"), R.drawable.message, R.drawable.smartphone);
+        PaperOnboardingPage source = new PaperOnboardingPage("Business book", "Welcome to GeeksForGeeks", Color.parseColor("#ffb174"), R.drawable.smartphone, R.drawable.smartphone);
+        PaperOnboardingPage source1 = new PaperOnboardingPage("Practice", "Practice questions from all topics", Color.parseColor("#22eaaa"), R.drawable.message, R.drawable.message);
+        PaperOnboardingPage source2 = new PaperOnboardingPage("Finance", "de livres sur la finance ", Color.parseColor("#ee5a5a"), R.drawable.smartphone, R.drawable.message);
 
         // array list is used to store
         // data of onbaording screen
