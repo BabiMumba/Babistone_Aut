@@ -73,9 +73,9 @@ class Register_Page : AppCompatActivity() {
                                 Intent(this,Home_pageActivity::class.java).also {
                                     Toast.makeText(this, "compte creer avec succes", Toast.LENGTH_SHORT).show()
                                     startActivity(it)
-
                                 }
                             } else {
+                               // progressbar.visibility = View.GONE
                                 Toast.makeText(
                                     this, "erreur d'enregistrement",
                                     Toast.LENGTH_SHORT
