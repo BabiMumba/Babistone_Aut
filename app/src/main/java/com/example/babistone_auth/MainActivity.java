@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.on_boarding);
         fragmentManager = getSupportFragmentManager();
 
         // new instance is created and data is took from an
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         elements.add(source);
         elements.add(source1);
         elements.add(source2);
+
         return elements;
     }
 }
