@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:background="@color/custom_color_primary"
     tools:context=".Onboarding">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/onboarding_page2"
+        android:background="@drawable/view_page_back"
+        app:layout_constraintBottom_toTopOf="@id/view_center_next"
+        app:layout_constraintTop_toTopOf="parent"
+        />
     <View
         android:layout_width="55dp"
         android:layout_height="55dp"
@@ -16,6 +25,7 @@
         app:layout_constraintTop_toTopOf="@id/image_next"
         />
     <View
+        android:id="@+id/view_center_next"
         android:layout_width="1dp"
         android:layout_height="1dp"
         app:layout_constraintBottom_toBottomOf="@id/image_next"

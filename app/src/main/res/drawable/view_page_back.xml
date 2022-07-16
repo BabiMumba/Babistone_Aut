@@ -6,5 +6,4 @@
     <corners android:bottomLeftRadius="60dp"
         android:bottomRightRadius="60dp"
         />
-
 </shape>
