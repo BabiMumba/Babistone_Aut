@@ -6,7 +6,22 @@
     android:layout_height="match_parent"
     android:background="@color/custom_color_primary"
     tools:context=".Onboarding">
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/image_next"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/icone_background"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toTopOf="@id/btn_get_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/custom_color_background"
+        />
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_get_start"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginBottom="50dp"
