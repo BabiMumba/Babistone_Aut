@@ -7,6 +7,15 @@
     android:background="@color/custom_color_primary"
     tools:context=".Onboarding">
     <View
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/icon_oute_background"
+        app:layout_constraintBottom_toBottomOf="@id/image_next"
+        app:layout_constraintEnd_toEndOf="@id/image_next"
+        app:layout_constraintStart_toStartOf="@id/image_next"
+        app:layout_constraintTop_toTopOf="@id/image_next"
+        />
+    <View
         android:layout_width="1dp"
         android:layout_height="1dp"
         app:layout_constraintBottom_toBottomOf="@id/image_next"
