@@ -2,12 +2,10 @@ package com.example.babistone_auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
-import androidx.core.view.children
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.activity_onboarding.*
@@ -50,7 +48,6 @@ class Onboarding : AppCompatActivity() {
             }
         })
         (onBoardingViwpager.getChildAt(0)as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-
     }
     private fun setupIndicators(){
         indicator_background = findViewById(R.id.indicator_containers)
@@ -61,7 +58,7 @@ class Onboarding : AppCompatActivity() {
         for (i in indicators.indices){
             indicators[i] = ImageView(applicationContext)
             indicators[i]?.let{
-                it.setImageDrawable(ContextCompat.getDrawable(applicationContext,R.drawable.indacation_inactive_back))
+                it.setImageDrawable(ContextCompat.getDrawable(applicationContext,R.drawable.indicator_inactive_background))
                 it.layoutParams = layoutparams
                 indicator_containers.addView(it)
             }
@@ -74,7 +71,7 @@ class Onboarding : AppCompatActivity() {
             if (i == position){
                 imageView.setImageDrawable(ContextCompat.getDrawable(applicationContext,R.drawable.indication_active_background))
             }else{
-                imageView.setImageDrawable(ContextCompat.getDrawable(applicationContext,R.drawable.indication_active_background))
+                imageView.setImageDrawable(ContextCompat.getDrawable(applicationContext,R.drawable.indicator_inactive_background))
             }
         }
     }
