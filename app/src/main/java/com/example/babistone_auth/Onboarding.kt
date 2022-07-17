@@ -20,23 +20,27 @@ class Onboarding : AppCompatActivity() {
         setupIndicators()
         setcurrentindicators(0)
 
-
     }
     private fun setOnboardingItems(){
         onboardingAdapter = OnBoarding_Adapter(
             listOf(
-                OnBoardind_items(R.drawable.smartphone,
-                "bonjour",
-                    "juste une pub merci"
+                OnBoardind_items(R.drawable.download,
+                "telecharger",
+                    "telecharger tous vos livre preferer"
                     ),
-                        OnBoardind_items(R.drawable.message,
-                "salutation",
-                "jespert que vous allez bien"
+                        OnBoardind_items(R.drawable.education_book,
+                "Livre sur l'education",
+                "retrouver tous vos sur l'education"
             ),
-                OnBoardind_items(R.drawable.smartphone,
-                    "very nice",
-                    "oo[ps encore de la pub"
+                OnBoardind_items(R.drawable.finance_book,
+                    "Livre sur la finance",
+                    "le livre sur la finace sont a votre portee"
+                ),
+                OnBoardind_items(R.drawable.girl_book,
+                    "liser en format pdf",
+                    "retrouver le meilleur lecteur pdf sur l'application stone book"
                 )
+
             )
         )
         val onBoardingViwpager = findViewById<ViewPager2>(R.id.onboarding_page2)
