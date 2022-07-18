@@ -1,25 +1,30 @@
 package com.example.babistone_auth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.button.MaterialButton
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 class Onboarding : AppCompatActivity() {
+
     private lateinit var onboardingAdapter: OnBoarding_Adapter
     lateinit var indicator_background :LinearLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
         setOnboardingItems()
         setupIndicators()
         setcurrentindicators(0)
-
     }
     private fun setOnboardingItems(){
         onboardingAdapter = OnBoarding_Adapter(
@@ -52,6 +57,23 @@ class Onboarding : AppCompatActivity() {
             }
         })
         (onBoardingViwpager.getChildAt(0)as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+        findViewById<ImageView>(R.id.image_next).setOnClickListener {
+            if (onBoardingViwpager.currentItem+1 < onboardingAdapter.itemCount){
+                onBoardingViwpager.currentItem += 1
+            }else{
+                navigationTohomeActivity()
+            }
+        }
+        findViewById<TextView>(R.id.text_skip).setOnClickListener {
+            navigationTohomeActivity()
+        }
+        findViewById<MaterialButton>(R.id.btn_get_start).setOnClickListener {
+            navigationTohomeActivity()
+        }
+    }
+    private fun navigationTohomeActivity(){
+        startActivity(Intent(applicationContext,Home_pageActivity::class.java))
+        finish()
     }
     private fun setupIndicators(){
         indicator_background = findViewById(R.id.indicator_containers)
