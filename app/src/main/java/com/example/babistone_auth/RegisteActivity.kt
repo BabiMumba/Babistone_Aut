@@ -66,6 +66,12 @@ class RegisteActivity : AppCompatActivity() {
         firebaseAuth.signInWithEmailAndPassword(mail,paswrd)
             .addOnSuccessListener { 
                 progressDialog.dismiss()
+                //get user info
+                val firebaseUser = firebaseAuth.currentUser
+                val  mail = firebaseUser!!.email
+                Toast.makeText(this, "login succes", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this,Home_pageActivity::class.java))
+                finish()
             }
             .addOnFailureListener { 
                 progressDialog.dismiss()
