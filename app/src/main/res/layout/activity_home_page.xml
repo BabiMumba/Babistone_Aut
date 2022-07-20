@@ -35,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="se deconnecter"
+        android:layout_margin="10dp"
         android:id="@+id/logout"
         android:layout_centerInParent="true"
         />
