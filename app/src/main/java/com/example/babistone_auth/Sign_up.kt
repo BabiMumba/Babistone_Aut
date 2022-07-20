@@ -27,6 +27,10 @@ class Sign_up : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.createACount.setOnClickListener {
+            startActivity(Intent(this,Sign_up::class.java))
+
+        }
         //configuration de la boite de dialogue
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Patienter")

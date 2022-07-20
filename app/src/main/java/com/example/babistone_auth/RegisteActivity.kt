@@ -30,6 +30,11 @@ class RegisteActivity : AppCompatActivity() {
         binding = ActivityRegisteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.createACount.setOnClickListener {
+            startActivity(Intent(this,RegisteActivity::class.java))
+
+        }
+
         //configuration de la boite de dialogue
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Patienter")
