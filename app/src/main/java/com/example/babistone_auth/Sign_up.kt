@@ -28,7 +28,7 @@ class Sign_up : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.createACount.setOnClickListener {
-            startActivity(Intent(this,Sign_up::class.java))
+            startActivity(Intent(this,RegisteActivity::class.java))
 
         }
         //configuration de la boite de dialogue

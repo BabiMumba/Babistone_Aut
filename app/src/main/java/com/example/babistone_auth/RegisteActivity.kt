@@ -31,7 +31,7 @@ class RegisteActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.createACount.setOnClickListener {
-            startActivity(Intent(this,RegisteActivity::class.java))
+            startActivity(Intent(this,Sign_up::class.java))
 
         }
 
