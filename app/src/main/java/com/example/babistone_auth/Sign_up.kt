@@ -26,4 +26,9 @@ class Sign_up : AppCompatActivity() {
         progressDialog.setMessage("creation du compte")
         progressDialog.setCanceledOnTouchOutside(false)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+    }
 }
