@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import com.example.babistone_auth.databinding.ActivityRegisteBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -61,6 +62,15 @@ class RegisteActivity : AppCompatActivity() {
 
     private fun firebaseLogin() {
 
+        progressDialog.show()
+        firebaseAuth.signInWithEmailAndPassword(mail,paswrd)
+            .addOnSuccessListener { 
+                progressDialog.dismiss()
+            }
+            .addOnFailureListener { 
+                progressDialog.dismiss()
+                Toast.makeText(this, "enregistrement echouer", Toast.LENGTH_SHORT).show()
+            }
     }
 
     private fun checkUser() {
