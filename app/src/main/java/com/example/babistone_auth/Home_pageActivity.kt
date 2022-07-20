@@ -16,6 +16,7 @@ class Home_pageActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomePageBinding
     private lateinit var actionBar: ActionBar
     //firebasse
+
     lateinit var firebaseAuth: FirebaseAuth
 
 
@@ -25,7 +26,6 @@ class Home_pageActivity : AppCompatActivity() {
         setContentView(binding.root)
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
-
 
     }
 
