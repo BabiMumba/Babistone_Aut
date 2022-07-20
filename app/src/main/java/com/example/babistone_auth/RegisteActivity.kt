@@ -21,6 +21,7 @@ class RegisteActivity : AppCompatActivity() {
     private lateinit var progressDialog:ProgressDialog
     //firebasse
     lateinit var firebaseAuth: FirebaseAuth
+
     private  var mail = ""
     private var paswrd = ""
 

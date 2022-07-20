@@ -22,6 +22,7 @@ class Sign_up : AppCompatActivity() {
 
     private  var mail = ""
     private var paswrd = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
