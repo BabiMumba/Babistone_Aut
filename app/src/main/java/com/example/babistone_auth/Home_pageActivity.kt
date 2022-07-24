@@ -25,10 +25,13 @@ class Home_pageActivity : AppCompatActivity() {
         setContentView(binding.root)
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
-        binding.logout.setOnClickListener {
+        /*
+         binding.logout.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
         }
+         */
+
     }
 
     private fun checkUser() {
