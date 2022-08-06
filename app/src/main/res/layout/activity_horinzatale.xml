@@ -25,6 +25,20 @@
             android:textStyle="bold"
             android:textSize="20sp"
             />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_trois_point"
+            android:layout_gravity="end"
+            />
+
+        <ImageView
+            android:layout_marginEnd="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_shopping_cart_24"
+            android:layout_gravity="end"
+            />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -36,7 +50,7 @@
        />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="20dp"
-        android:id="@+id/horiez"
+        android:id="@+id/category2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
