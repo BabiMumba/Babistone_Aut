@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setMainCategory(allcategories: List<allcategories>){
         mainCategoryRecycler = findViewById(R.id.main_recycler_re)
-
         val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this)
         mainCategoryRecycler!!.layoutManager
         mainRecycler = MainRecycler(this,allcategories)
