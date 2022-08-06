@@ -15,11 +15,12 @@ class MainRecycler(private val context: Context, private val allcategories: List
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
+        return MainViewHolder(LayoutInflater.from(context).inflate(R.layout.main_recycler_row_item,parent,false))
 
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        return MainViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_main))
+
     }
 
     override fun getItemCount(): Int {
