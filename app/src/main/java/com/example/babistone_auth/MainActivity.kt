@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+
+
         val allcategory: MutableList<allcategories> = ArrayList()
         allcategory.add(allcategories("nollywood"))
         allcategory.add(allcategories("papa babi"))
@@ -24,6 +26,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setMainCategory(allcategories: List<allcategories>){
+
+        mainCategoryRecycler = findViewById(R.id.recycler)
         val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this)
         mainCategoryRecycler!!.layoutManager
         mainRecycler = MainRecycler(this,allcategories)
