@@ -10,6 +10,7 @@ import com.example.babistone_auth.R
 import com.example.babistone_auth.model.allcategories
 
 class MainRecycler(private val context: Context, private val allcategories: List<allcategories>):
+
     RecyclerView.Adapter<MainRecycler.MainViewHolder>() {
     class MainViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
 

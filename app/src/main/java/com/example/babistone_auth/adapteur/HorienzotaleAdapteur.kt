@@ -9,7 +9,7 @@ import com.example.babistone_auth.R
 import com.example.babistone_auth.model.fashio_model
 import kotlinx.android.synthetic.main.row_item.view.*
 
-class HorienzotaleAdapteur(private var context: Context,private var fashioModel: ArrayList<fashio_model>):
+class HorienzotaleAdapteur( var context: Context, var fashioModel: ArrayList<fashio_model>):
     RecyclerView.Adapter<HorienzotaleAdapteur.MyviewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyviewHolder {
