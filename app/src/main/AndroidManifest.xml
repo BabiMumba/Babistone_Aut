@@ -23,9 +23,6 @@
             android:name=".RecysclerView_nested"
             android:exported="false" />
         <activity
-            android:name=".Home_pageActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
