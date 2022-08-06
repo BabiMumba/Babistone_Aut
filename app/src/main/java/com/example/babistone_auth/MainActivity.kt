@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.babistone_auth.R
 import com.example.babistone_auth.adapteur.MainRecycler
 import com.example.babistone_auth.model.allcategories
 
@@ -15,6 +14,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+        val allcategory: MutableList<allcategories> = ArrayList()
+        allcategory.add(allcategories("nollywood"))
+        allcategory.add(allcategories("papa babi"))
+        allcategory.add(allcategories("pateur kamael"))
+        allcategory.add(allcategories("maman noela"))
+
+
     }
 
     private fun setMainCategory(allcategories: List<allcategories>){
