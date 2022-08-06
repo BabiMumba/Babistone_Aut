@@ -16,14 +16,10 @@ class HorienzotaleAdapteur: RecyclerView.Adapter<HorienzotaleAdapteur.MyviewHold
     override fun onBindViewHolder(holder: MyviewHolder, position: Int) {
 
     }
-
     override fun getItemCount(): Int {
         return 30
-
     }
-
     class MyviewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-
     }
 
 
