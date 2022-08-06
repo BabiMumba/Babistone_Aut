@@ -20,12 +20,9 @@ class MainActivity : AppCompatActivity() {
         allcategory.add(allcategories("papa babi"))
         allcategory.add(allcategories("pateur kamael"))
         allcategory.add(allcategories("maman noela"))
-
-
     }
-
     private fun setMainCategory(allcategories: List<allcategories>){
-        mainCategoryRecycler = findViewById(R.id.recycler)
+        mainCategoryRecycler = findViewById(R.id.main_recycler_re)
         val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this)
         mainCategoryRecycler!!.layoutManager
         mainRecycler = MainRecycler(this,allcategories)
