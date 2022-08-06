@@ -32,18 +32,33 @@
                 android:layout_margin="5dp"
                 />
            <RelativeLayout
-               android:layout_width="wrap_content"
+               android:layout_marginBottom="10dp"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
                >
                <RatingBar
+                   android:layout_alignParentBottom="true"
                    android:id="@+id/note_etoile"
                    style="@style/Widget.AppCompat.RatingBar.Small"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:layout_centerHorizontal="true"
                    android:progressTint="#FF5722"
                    android:rating="3"
-                   android:secondaryProgressTint="#FF5722" />
+                   android:secondaryProgressTint="#FF5722"/>
+               <TextView
+                   android:id="@+id/prix"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="prix"
+                   android:textStyle="bold"
+                   android:textColor="@color/purple_700"
+                   android:layout_marginEnd="10dp"
+                   />
+
+
+
            </RelativeLayout>
 
 
