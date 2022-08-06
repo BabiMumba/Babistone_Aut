@@ -19,10 +19,14 @@ class Horinzatale_activity : AppCompatActivity() {
         setContentView(R.layout.activity_horinzatale)
 
 
-        liste_fashion.add(fashio_model("chemise",100,R.drawable.casque))
-        liste_fashion.add(fashio_model("chemisier",100,R.drawable.casque))
-        liste_fashion.add(fashio_model("chemise 3",100,R.drawable.casque))
-        liste_fashion.add(fashio_model("chemise 4",100,R.drawable.casque))
+        liste_fashion.add(fashio_model("chemise",100,R.drawable.chemise1))
+        liste_fashion.add(fashio_model("chemise 2",300,R.drawable.chemise2))
+        liste_fashion.add(fashio_model("banane",7500,R.drawable.air_pot))
+        liste_fashion.add(fashio_model("casque",600,R.drawable.casque))
+        liste_fashion.add(fashio_model("beignet",4500,R.drawable.beignet))
+        liste_fashion.add(fashio_model("marienette",650,R.drawable.marie))
+        liste_fashion.add(fashio_model("Humbergeur",12000,R.drawable.emburger))
+
         display.addAll(liste_fashion)
         val adapteur = HorienzotaleAdapteur(this,display)
         Horiz_Recy.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
