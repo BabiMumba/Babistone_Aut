@@ -2,6 +2,7 @@ package com.example.babistone_auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.babistone_auth.R
 import com.example.babistone_auth.adapteur.MainRecycler
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setMainCategory(allcategories: List<allcategories>){
+        val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this)
+        mainCategoryRecycler!!.layoutManager
+        mainRecycler = MainRecycler(this,allcategories)
+        mainCategoryRecycler!!.adapter = mainRecycler
 
     }
 
