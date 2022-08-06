@@ -20,7 +20,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".RecysclerView_nested"
+            android:name=".MainRecyclerv"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
