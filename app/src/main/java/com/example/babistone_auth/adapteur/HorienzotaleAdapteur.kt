@@ -26,7 +26,9 @@ class HorienzotaleAdapteur(private var context: Context,private var fashioModel:
     class MyviewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         fun binItem(fashioModel: fashio_model){
             itemView.nom_article.text = fashioModel.nom
-            itemView.
+            itemView.prix.text = fashioModel.prix.toString()
+            itemView.image_article.setImageResource(fashioModel.image)
+
 
         }
 
