@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.babistone_auth.R
 import com.example.babistone_auth.model.fashio_model
+import kotlinx.android.synthetic.main.row_item.view.*
 
 class HorienzotaleAdapteur(private var context: Context,private var fashioModel: ArrayList<fashio_model>):
     RecyclerView.Adapter<HorienzotaleAdapteur.MyviewHolder>() {
@@ -20,9 +21,15 @@ class HorienzotaleAdapteur(private var context: Context,private var fashioModel:
 
     }
     override fun getItemCount(): Int {
-        return 30
+        return fashioModel.size
     }
     class MyviewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+        fun binItem(fashioModel: fashio_model){
+            itemView.nom_article.text = fashioModel.nom
+            itemView.
+
+        }
+
     }
 
 
