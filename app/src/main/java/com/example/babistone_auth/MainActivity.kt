@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import com.example.babistone_auth.R
 import com.example.babistone_auth.adapteur.MainRecycler
+import com.example.babistone_auth.model.allcategories
 
 class MainActivity : AppCompatActivity() {
     private var  mainCategoryRecycler : RecyclerView? = null
@@ -15,5 +16,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
     }
 
+    private fun setMainCategory(allcategories: List<allcategories>){
+
+    }
 
 }
