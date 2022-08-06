@@ -12,7 +12,7 @@ import com.example.babistone_auth.model.allcategories
 class MainRecycler(private val context: Context, private val allcategories: List<allcategories>):
     RecyclerView.Adapter<MainRecycler.MainViewHolder>() {
     class MainViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-       lateinit var category_title: TextView
+      private  var category_title: TextView? = null
        init {
            category_title = itemView.findViewById(R.id.title_text)
        }
