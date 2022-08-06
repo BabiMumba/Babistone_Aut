@@ -9,11 +9,10 @@ import com.example.babistone_auth.adapteur.HorienzotaleAdapteur
 import com.example.babistone_auth.model.fashio_model
 
 class Horinzatale_activity : AppCompatActivity() {
-
     private lateinit var recyclerview : RecyclerView
-
+    private lateinit var adapteur : HorienzotaleAdapteur
     val liste_fashion = ArrayList<fashio_model>()
-    val display = ArrayList<fashio_model>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,11 +24,13 @@ class Horinzatale_activity : AppCompatActivity() {
         liste_fashion.add(fashio_model("chemisier",100,R.drawable.casque))
         liste_fashion.add(fashio_model("chemise 3",100,R.drawable.casque))
         liste_fashion.add(fashio_model("chemise 4",100,R.drawable.casque))
-        display.addAll(liste_fashion)
 
-        recyclerview.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        recyclerview.adapter = adapteur
-
-
+    }
+    private fun setMainfashion(fashion:ArrayList<fashio_model>){
+        recyclerview = findViewById(R.id.Horiz_Recy)
+        val lm: RecyclerView.LayoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        recyclerview!!.layoutManager
+        adapteur = HorienzotaleAdapteur(this,fashion)
+        recyclerview!!.adapter = adapteur
     }
 }
