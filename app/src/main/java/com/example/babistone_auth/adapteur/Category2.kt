@@ -41,27 +41,43 @@ class Category2(var context: Context, var fashioModel: ArrayList<fashio_model>):
         holder.image.setImageResource(fashion.image)
         holder.itemView.setOnClickListener {
             if (position == 0) {
+                var prix = fashion.prix
+                var nom = fashion.nom
                 var image =  fashion.image
                 val it = Intent(context, DetailleActivity::class.java)
                 it.putExtra("image", image)
+                it.putExtra("nom", nom)
+                it.putExtra("prix", prix)
                 context.startActivities(arrayOf(it))
             }
             if (position == 1) {
+                var prix = fashion.prix
+                var nom = fashion.nom
                 var image =  fashion.image
                 val it = Intent(context, DetailleActivity::class.java)
                 it.putExtra("image", image)
+                it.putExtra("nom", nom)
+                it.putExtra("prix", prix)
                 context.startActivities(arrayOf(it))
             }
             if (position == 2) {
+                var prix = fashion.prix
+                var nom = fashion.nom
                 var image =  fashion.image
                 val it = Intent(context, DetailleActivity::class.java)
                 it.putExtra("image", image)
+                it.putExtra("nom", nom)
+                it.putExtra("prix", prix)
                 context.startActivities(arrayOf(it))
             }
             if (position == 3) {
+                var prix = fashion.prix
+                var nom = fashion.nom
                 var image =  fashion.image
                 val it = Intent(context, DetailleActivity::class.java)
                 it.putExtra("image", image)
+                it.putExtra("nom", nom)
+                it.putExtra("prix", prix)
                 context.startActivities(arrayOf(it))
             }
         }
