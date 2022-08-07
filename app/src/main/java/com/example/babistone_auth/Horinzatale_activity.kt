@@ -29,6 +29,7 @@ class Horinzatale_activity : AppCompatActivity() {
 
 
         liste_fashion.add(fashio_model("Humberguer",300,R.drawable.emburger))
+        liste_fashion.add(fashio_model("Pc lenovo",300,R.drawable.pec))
         liste_fashion.add(fashio_model("chemise 2",100,R.drawable.chemise2))
         liste_fashion.add(fashio_model("banane",100,R.drawable.air_pot))
         liste_fashion2.add(fashio_model("casque",100,R.drawable.casque))
