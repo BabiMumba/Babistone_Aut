@@ -58,7 +58,7 @@ class Category2(var context: Context, var fashioModel: ArrayList<fashio_model>):
                 it.putExtra("image", image)
                 context.startActivities(arrayOf(it))
             }
-            if (position == 2) {
+            if (position == 3) {
                 var image =  fashion.image
                 val it = Intent(context, DetailleActivity::class.java)
                 it.putExtra("image", image)
