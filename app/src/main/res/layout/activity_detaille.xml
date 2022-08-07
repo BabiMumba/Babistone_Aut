@@ -96,10 +96,7 @@
             android:textColor="@color/white"
             android:textStyle="normal"
             />
-
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>
