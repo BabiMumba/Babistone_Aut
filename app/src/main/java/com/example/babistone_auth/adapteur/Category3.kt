@@ -40,6 +40,7 @@ class Category3(var context: Context, var fashioModel: ArrayList<fashio_model>):
         holder.nom.text = fashion.nom.toString()
         holder.image.setImageResource(fashion.image)
         holder.itemView.setOnClickListener {
+
             if (position == 0) {
                 var prix = fashion.prix
                 var nom = fashion.nom
