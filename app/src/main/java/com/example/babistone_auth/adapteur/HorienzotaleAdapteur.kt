@@ -49,23 +49,16 @@ class HorienzotaleAdapteur( var context: Context, var fashioModel: ArrayList<fas
                 context.startActivities(arrayOf(it))
             }
             if (position == 1) {
+                var prix = fashion.prix
+                var nom = fashion.nom
                 var image =  fashion.image
                 val it = Intent(context, DetailleActivity::class.java)
                 it.putExtra("image", image)
+                it.putExtra("nom", nom)
+                it.putExtra("prix", prix)
                 context.startActivities(arrayOf(it))
             }
-            if (position == 2) {
-                var image =  fashion.image
-                val it = Intent(context, DetailleActivity::class.java)
-                it.putExtra("image", image)
-                context.startActivities(arrayOf(it))
-            }
-            if (position == 3) {
-                var image =  fashion.image
-                val it = Intent(context, DetailleActivity::class.java)
-                it.putExtra("image", image)
-                context.startActivities(arrayOf(it))
-            }
+
 
         }
 
