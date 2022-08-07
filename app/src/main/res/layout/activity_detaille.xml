@@ -84,7 +84,7 @@
             android:secondaryProgressTint="#FF5722"
             />
         <TextView
-            android:id="@+id/prix"
+            android:id="@+id/prix_deta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"

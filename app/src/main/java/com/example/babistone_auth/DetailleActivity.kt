@@ -11,8 +11,16 @@ class DetailleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detaille)
         var intent = intent
-        val ttr = intent.getIntExtra("image",R.drawable.pec)
-        img_detaille.setImageResource(ttr)
+
+        //recuperation des inforamations
+        val image = intent.getIntExtra("image",R.drawable.pec)
+        val nom = intent.getStringExtra("nom")
+        val prix = intent.getDoubleExtra("prix",0.0)
+
+
+        img_detaille.setImageResource(image)
+        nom_article_deta.setText(nom)
+        prix_deta.text = prix.toString()
 
     }
 }
