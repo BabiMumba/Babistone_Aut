@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.babistone_auth.R
 import com.example.babistone_auth.model.fashio_model
@@ -36,6 +37,11 @@ class HorienzotaleAdapteur( var context: Context, var fashioModel: ArrayList<fas
         holder.prix.text = fashion.prix.toString()
         holder.nom.text = fashion.nom.toString()
         holder.image.setImageResource(fashion.image)
+        holder.itemView.setOnClickListener {
+            if (position == 0) {
+                Toast.makeText(context, "$position", Toast.LENGTH_SHORT).show()
+            }
+        }
 
 
     }
