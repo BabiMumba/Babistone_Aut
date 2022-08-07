@@ -1,6 +1,7 @@
 package com.example.babistone_auth.adapteur
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.babistone_auth.DetailleActivity
 import com.example.babistone_auth.R
 import com.example.babistone_auth.model.fashio_model
 import kotlinx.android.synthetic.main.row_item.view.*
@@ -38,8 +40,29 @@ class Category2(var context: Context, var fashioModel: ArrayList<fashio_model>):
         holder.nom.text = fashion.nom.toString()
         holder.image.setImageResource(fashion.image)
         holder.itemView.setOnClickListener {
-            if (position==0){
-                Toast.makeText(context, "$position", Toast.LENGTH_SHORT).show()
+            if (position == 0) {
+                var image =  fashion.image
+                val it = Intent(context, DetailleActivity::class.java)
+                it.putExtra("image", image)
+                context.startActivities(arrayOf(it))
+            }
+            if (position == 1) {
+                var image =  fashion.image
+                val it = Intent(context, DetailleActivity::class.java)
+                it.putExtra("image", image)
+                context.startActivities(arrayOf(it))
+            }
+            if (position == 3) {
+                var image =  fashion.image
+                val it = Intent(context, DetailleActivity::class.java)
+                it.putExtra("image", image)
+                context.startActivities(arrayOf(it))
+            }
+            if (position == 4) {
+                var image =  fashion.image
+                val it = Intent(context, DetailleActivity::class.java)
+                it.putExtra("image", image)
+                context.startActivities(arrayOf(it))
             }
         }
 
