@@ -1,5 +1,6 @@
 package com.example.babistone_auth
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -34,8 +35,11 @@ class ResultatActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         db.collection("info_book")
             .addSnapshotListener(object :EventListener<QuerySnapshot>{
-                override fun onEvent(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
-
+                @SuppressLint("NotifyDataSetChanged")
+                override fun onEvent(
+                    value: QuerySnapshot?,
+                    error: FirebaseFirestoreException?
+                ) {
                     if (error != null){
                         Log.e("Firestore Error", error.message.toString())
                         return

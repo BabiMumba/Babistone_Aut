@@ -26,8 +26,8 @@ class FirestorePage : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance()
 
         val book_info:MutableMap<String, Any> = HashMap()
-        book_info["name book"] = namebook
-        book_info["name autor"] = autor_name
+        book_info["name_book"] = namebook
+        book_info["name_autor"] = autor_name
 
         db.collection("info_book")
             .add(book_info)

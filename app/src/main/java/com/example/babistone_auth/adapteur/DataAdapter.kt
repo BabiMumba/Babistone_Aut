@@ -17,9 +17,7 @@ class DataAdapter(private val liste_book:ArrayList<library>):RecyclerView.Adapte
             name_book = itemView.findViewById(R.id.name_bk)
             name_autor= itemView.findViewById(R.id.name_aut)
         }
-
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyviewHolde {
         val itemview = LayoutInflater.from(parent.context).inflate(R.layout.row_item_data,parent,false)
         return MyviewHolde(itemview)
@@ -31,7 +29,6 @@ class DataAdapter(private val liste_book:ArrayList<library>):RecyclerView.Adapte
         holder.name_book.text = lbrary.name_book.toString()
         holder.name_autor.text = lbrary.name_autor.toString()
         holder.itemView.setOnClickListener {
-
         }
     }
 
