@@ -28,6 +28,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_firestore_page);
+
+        // getting our instance
+        // from Firebase Firestore.
+        db = FirebaseFirestore.getInstance();
+
+        // initializing our edittext and buttons
+        courseNameEdt = findViewById(R.id.idEdtCourseName);
+        courseDescriptionEdt = findViewById(R.id.idEdtCourseDescription);
+        courseDurationEdt = findViewById(R.id.idEdtCourseDuration);
+        submitCourseBtn = findViewById(R.id.idBtnSubmitCourse);
+
     }
 }
