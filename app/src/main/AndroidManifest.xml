@@ -20,7 +20,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Horinzatale_activity"
             android:exported="false" />
         <activity
             android:name=".FirestorePage"
@@ -29,7 +29,7 @@
             android:name=".DetailleActivity"
             android:exported="false" />
         <activity
-            android:name=".Horinzatale_activity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
