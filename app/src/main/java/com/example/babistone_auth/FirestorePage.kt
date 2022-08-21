@@ -24,14 +24,15 @@ class FirestorePage : AppCompatActivity() {
 
 
         // Create a new user with a first and last name
-        var name_book = findViewById<EditText>(R.id.name_book).toString()
-        var name_autor = findViewById<EditText>(R.id.autor).toString()
+        val name_book = findViewById<EditText>(R.id.name_book).text.toString()
+        val name_autor = findViewById<EditText>(R.id.autor).text.toString()
 
         add_value.setOnClickListener {
             db.collection("info_book")
                 .add(add_book(name_book,name_autor))
                 .addOnSuccessListener {
                     Toast.makeText(this, "livre ajouter", Toast.LENGTH_SHORT).show()
+
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, "livre non ajouter", Toast.LENGTH_SHORT).show()
