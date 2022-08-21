@@ -17,7 +17,7 @@ class FirestorePage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_firestore_page)
+        setContentView(R.layout.activity_main)
 
         //Initialisez une instance de Cloud Firestore :
 
@@ -26,6 +26,7 @@ class FirestorePage : AppCompatActivity() {
             db.collection("info_book")
                 .add(add_book(name_book.text.toString(),autor.text.toString()))
                 .addOnSuccessListener {
+
                     Toast.makeText(this, "livre ajouter", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener {
