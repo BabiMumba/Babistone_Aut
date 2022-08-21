@@ -20,9 +20,11 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".FirestorePage"
+            android:exported="false" />
+        <activity
             android:name=".DetailleActivity"
             android:exported="false" />
-
         <activity
             android:name=".Horinzatale_activity"
             android:exported="true">
