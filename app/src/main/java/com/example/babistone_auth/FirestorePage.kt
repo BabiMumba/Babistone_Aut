@@ -1,16 +1,16 @@
 package com.example.babistone_auth
 
-import android.content.ContentValues.TAG
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 
 class FirestorePage : AppCompatActivity() {
+
 
 
     private var db = Firebase.firestore
@@ -22,17 +22,11 @@ class FirestorePage : AppCompatActivity() {
         //Initialisez une instance de Cloud Firestore :
 
 
-
-        // Create a new user with a first and last name
-        val namebook = name_book.text.toString()
-        val nameautor = autor.text.toString()
-
         add_value.setOnClickListener {
             db.collection("info_book")
-                .add(add_book(namebook,nameautor))
+                .add(add_book(name_book.text.toString(),autor.text.toString()))
                 .addOnSuccessListener {
                     Toast.makeText(this, "livre ajouter", Toast.LENGTH_SHORT).show()
-
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, "livre non ajouter", Toast.LENGTH_SHORT).show()
