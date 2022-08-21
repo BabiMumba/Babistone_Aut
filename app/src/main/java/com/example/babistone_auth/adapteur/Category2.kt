@@ -23,13 +23,15 @@ class Category2(var context: Context, var fashioModel: ArrayList<fashio_model>):
          var prix:TextView
          var image:ImageView
         init {
+
             nom = itemView.findViewById(R.id.nom_article)
             prix = itemView.findViewById(R.id.prix)
             image = itemView.findViewById(R.id.image_article)
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyviewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int
+    ): MyviewHolder {
       val view = LayoutInflater.from(parent.context).inflate(R.layout.row_item,parent,false)
         return  MyviewHolder(view)
     }
@@ -81,7 +83,6 @@ class Category2(var context: Context, var fashioModel: ArrayList<fashio_model>):
                 context.startActivities(arrayOf(it))
             }
         }
-
 
     }
     override fun getItemCount(): Int {

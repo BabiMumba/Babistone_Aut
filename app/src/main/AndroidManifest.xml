@@ -22,9 +22,7 @@
         <activity
             android:name=".DetailleActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
         <activity
             android:name=".Horinzatale_activity"
             android:exported="true">
