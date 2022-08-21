@@ -27,6 +27,6 @@ class DataAdapter(private val liste_book:ArrayList<library>):RecyclerView.Adapte
     }
 
     override fun getItemCount(): Int {
-        liste_book.size
+        return liste_book.size
     }
 }
