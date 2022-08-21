@@ -20,6 +20,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ResultatActivity"
+            android:exported="false" />
+        <activity
             android:name=".Horinzatale_activity"
             android:exported="false" />
         <activity
