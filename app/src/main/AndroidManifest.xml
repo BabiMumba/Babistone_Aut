@@ -20,7 +20,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ShowBookFirestore"
+            android:name=".ResultatActivity"
             android:exported="false" />
         <activity
             android:name=".FirestorePage"
@@ -35,7 +35,7 @@
             android:name=".DetailleActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultatActivity"
+            android:name=".ShowBookFirestore"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

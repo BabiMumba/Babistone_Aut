@@ -1,5 +1,6 @@
 package com.example.babistone_auth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -34,6 +35,13 @@ class ShowBookFirestore : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_book_firestore)
+
+
+        add_data.setOnClickListener {
+            Intent(this,FirestorePage::class.java).also {
+                startActivity(it)
+            }
+        }
         auth = Firebase.auth
         val query :CollectionReference = db.collection("info_book")
         val options = FirestoreRecyclerOptions.Builder<User>()
@@ -48,7 +56,6 @@ class ShowBookFirestore : AppCompatActivity() {
             override fun onBindViewHolder(holder: UserViewHolder, position: Int, model: User) {
                 val txtname:TextView = holder.itemView.findViewById(R.id.name_bk)
                 val txtbook:TextView = holder.itemView.findViewById(R.id.name_aut)
-
                 txtname.text = model.name
                 txtbook.text = model.image
 
@@ -60,5 +67,9 @@ class ShowBookFirestore : AppCompatActivity() {
 
 
 
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 }
