@@ -2,10 +2,54 @@ package com.example.babistone_auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.babistone_auth.adapteur.DataAdapter
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter
+import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
+data class User(
+    val name:String = "",
+    val image:String =""
+)
+class UserViewHolder(itemView:View):RecyclerView.ViewHolder(itemView)
 class ShowBookFirestore : AppCompatActivity() {
+    private companion object{
+        private const val TAG = "MainActivity"
+    }
+    private lateinit var auth:FirebaseAuth
+    val db = Firebase.firestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_book_firestore)
+        auth = Firebase.auth
+        val query :CollectionReference = db.collection("info_book")
+        val options = FirestoreRecyclerOptions.Builder<User>()
+            .setQuery(query,User::class.java)
+            .setLifecycleOwner(this).build()
+        val adapter = object :FirestoreRecyclerAdapter<User,UserViewHolder>(options){
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+                val view = LayoutInflater.from(parent.context).inflate(R.layout.row_item_data,parent,false)
+                return UserViewHolder(view)
+            }
+
+            override fun onBindViewHolder(holder: UserViewHolder, position: Int, model: User) {
+                val txtname:TextView = holder.itemView.findViewById(R.id.name_bk)
+                val txtbook:TextView = holder.itemView.findViewById(R.id.name_aut)
+            }
+
+        }
+
+
     }
 }
