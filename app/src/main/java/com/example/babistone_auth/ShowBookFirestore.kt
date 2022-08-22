@@ -49,13 +49,13 @@ class ShowBookFirestore : AppCompatActivity() {
             .setLifecycleOwner(this).build()
         val adapter = object :FirestoreRecyclerAdapter<User,UserViewHolder>(options){
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-                val view = LayoutInflater.from(parent.context).inflate(R.layout.row_item_data,parent,false)
+                val view = LayoutInflater.from(parent.context).inflate(R.layout.liste_row,parent,false)
                 return UserViewHolder(view)
             }
 
             override fun onBindViewHolder(holder: UserViewHolder, position: Int, model: User) {
-                val txtname:TextView = holder.itemView.findViewById(R.id.name_bk)
-                val txtbook:TextView = holder.itemView.findViewById(R.id.name_aut)
+                val txtname:TextView = holder.itemView.findViewById(R.id.name_liste)
+                val txtbook:TextView = holder.itemView.findViewById(R.id.nm)
                 txtname.text = model.name
                 txtbook.text = model.image
 
