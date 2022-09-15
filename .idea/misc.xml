@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_detaille.xml" value="0.18645833333333334" />
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_firestore_page.xml" value="0.18645833333333334" />
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_horinzatale.xml" value="0.18645833333333334" />
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_main.xml" value="0.18645833333333334" />
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_resultat.xml" value="0.18645833333333334" />
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_show_book_firestore.xml" value="0.18645833333333334" />
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/liste_row.xml" value="0.1" />
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/row_item.xml" value="0.18645833333333334" />
+        <entry key="..\:/Mes Series/dessin anime/kaeloo s3/Babistone_Auth/app/src/main/res/layout/row_item_data.xml" value="0.18645833333333334" />
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/drawable/arro_btn.xml" value="0.188" />
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/drawable/arrondire.xml" value="0.13333333333333333" />
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/drawable/icon_oute_background.xml" value="0.1" />
@@ -23,6 +32,7 @@
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_resultat.xml" value="0.3333333333333333" />
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_show_book_firestore.xml" value="0.18645833333333334" />
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/layout/liste_row.xml" value="0.1" />
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/layout/login_page.xml" value="0.18645833333333334" />
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/layout/main_recycler.xml" value="0.22" />
         <entry key="..\:/kaeloo s3/Babistone_Auth/app/src/main/res/layout/main_recycler_row_item.xml" value="0.18541666666666667" />

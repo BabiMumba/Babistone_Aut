@@ -31,12 +31,9 @@ class ShowBookFirestore : AppCompatActivity() {
     }
     private lateinit var auth:FirebaseAuth
     val db = Firebase.firestore
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_book_firestore)
-
-
         add_data.setOnClickListener {
             Intent(this,FirestorePage::class.java).also {
                 startActivity(it)
@@ -58,15 +55,11 @@ class ShowBookFirestore : AppCompatActivity() {
                 val txtbook:TextView = holder.itemView.findViewById(R.id.nm)
                 txtname.text = model.name
                 txtbook.text = model.image
-
             }
 
         }
         rv_user.adapter = adapter
         rv_user.layoutManager = LinearLayoutManager(this)
-
-
-
     }
 
 }
